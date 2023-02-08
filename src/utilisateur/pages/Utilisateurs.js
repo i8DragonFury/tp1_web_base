@@ -1,5 +1,5 @@
 import React from "react";
-import ListeUtilisateurs from "../../places/components/ListeUtilisateurs";
+import ListeUtilisateurs from "../components/ListeUtilisateurs";
 
 function Utilisateurs() {
   const utilisateurs = [

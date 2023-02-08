@@ -1,12 +1,15 @@
 import React from "react";
 import "./ListeUtilisateurs.css";
 import Utilisateur from "./Utilisateur";
+import Card from "../../shared/Card";
 
 function ListeUtilisateurs(props) {
   if (props.utilisateurs.length === 0) {
     return (
       <div className="center">
-        <h2>Aucun utilisateur</h2>
+        <Card>
+          <h2>Aucun utilisateur</h2>
+        </Card>
       </div>
     );
   }
