@@ -10,26 +10,25 @@ import "./MainNavigation.css";
 
 function MainNavigation(props) {
 
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+  const [tiroirOuvert, setTiroirOuvert] = useState(false);
 
   const ouvrirTiroir = () => {
-    setDrawerIsOpen(true);
+    setTiroirOuvert(true);
   };
 
   const fermerTiroir = () => {
-    setDrawerIsOpen(false);
+    setTiroirOuvert(false);
   };
 
   return (
     <React.Fragment>
-      {drawerIsOpen && <Backdrop onClick={fermerTiroir} />}
-      {drawerIsOpen && (
-        <SideDrawer>
+      {tiroirOuvert && <Backdrop onClick={fermerTiroir} />}
+        <SideDrawer show={tiroirOuvert}>
           <nav className="main-navigation__drawer-nav">
             <NavLinks />
           </nav>
         </SideDrawer>
-      )}
+      
       <MainHeader>
         <button className="main-navigation__menu-btn" onClick={ouvrirTiroir}>
           <span />
