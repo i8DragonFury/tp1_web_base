@@ -23,7 +23,7 @@ function MainNavigation(props) {
   return (
     <React.Fragment>
       {tiroirOuvert && <Backdrop onClick={fermerTiroir} />}
-        <SideDrawer show={tiroirOuvert}>
+        <SideDrawer show={tiroirOuvert} onClick={fermerTiroir}>
           <nav className="main-navigation__drawer-nav">
             <NavLinks />
           </nav>
