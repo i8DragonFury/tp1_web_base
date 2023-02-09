@@ -1,5 +1,6 @@
 import React from "react";
 import ListePlaces from "./components/ListePlaces";
+import { useParams } from "react-router-dom";
 
 const PLACES = [
   {
@@ -31,10 +32,11 @@ const PLACES = [
 ];
 
 function PlacesUtilisateur() {
+  const userId = useParams().userId;
+  const placesChargees = PLACES.filter((place) => (place.createur === userId));
   return (
-    <div>
-    <ListePlaces places={PLACES} />;
-  </div>
+    <ListePlaces places={placesChargees} />
+  
   )
 }
 
