@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../../../shared/Card";
+import Button from "../../../shared/Formulaire/Button";
 import "./Place.css";
 
 function Place({ place }) {
@@ -15,9 +16,9 @@ function Place({ place }) {
           <p>{place.description}</p>
         </div>
         <div className="place-item__actions">
-          <button> Voir sur la carte </button>
-          <button> Éditer </button>
-          <button> Supprimer </button>
+          <Button inverse> Voir sur la carte </Button>
+          <Button to={`/places/${place.id}`}> Éditer </Button>
+          <Button danger> Supprimer </Button>
         </div>
       </Card>
     </li>
