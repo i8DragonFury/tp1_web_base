@@ -8,6 +8,8 @@ import {
 import Utilisateurs from "./utilisateur/pages/Utilisateurs";
 import NouvellePlace from "./places/pages/NouvellePlace";
 import MainNavigation from "./shared/Navigation/MainNavigation";
+import PlacesUtilisateur from "./places/pages/PlacesUtilisateur";
+import Place from "./places/pages/components/Place";
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Utilisateurs />
+          </Route>
+          <Route path="/:userId/places" exact>
+              <PlacesUtilisateur />
           </Route>
           <Route path="/places/nouvelle" exact>
             <NouvellePlace />

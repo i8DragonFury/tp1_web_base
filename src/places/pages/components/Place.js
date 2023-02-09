@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "../../../shared/Card";
-import "'./Place.css";
+import "./Place.css";
 
 function Place({ place }) {
   return (
     <li className="place-item">
       <Card className="place-item__content">
         <div className="place-item__image">
-          <img src={place.image} alt={place.titre} />
+          <img src={place.imageUrl} alt={place.titre} />
         </div>
         <div className="place-item__info">
           <h2> {place.titre}</h2>
