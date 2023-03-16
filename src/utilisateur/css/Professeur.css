@@ -12,13 +12,13 @@
     text-decoration: none;
     padding: 1rem;
     color: white;
-    background: #292929;
+    background: #99cc00;
   }
   
-  .user-item a:hover,
+  /*.user-item a:hover,
   .user-item a:active {
     background: #ffd900;
-  }
+  }*/
   
   .user-item__content {
     padding: 0;
@@ -36,13 +36,13 @@
     font-weight: normal;
     color: #ffd900;
   }
-  
+  /*
   .user-item:hover h2,
   .user-item:active h2,
   .user-item:hover h3,
   .user-item:active h3 {
     color: #292929;
-  }
+  }*/
   
   .user-item__info h3 {
     margin: 0;
