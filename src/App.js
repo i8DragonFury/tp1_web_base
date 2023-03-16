@@ -12,7 +12,9 @@ import AppCours from "./places/pages/AppCours";
 import NouvelProf from "./utilisateur/components/NouvelProf";
 import ListeProfs from "./utilisateur/components/ListeProfs";
 import CoursProfs from "./utilisateur/CoursProf";
-import Etudiants from "./places/pages/Etudiants";
+import CoursDetaille from "./places/pages/CoursDetaille";
+import NouvelEtudiant from "./places/pages/NouvelEtudiant";
+
 function App() {
   
   const [listeProfs, setListeProfs] = useState(Profs)
@@ -48,6 +50,7 @@ function App() {
             </div>
           </Route>
           <Route path="/ListeProfs" exact>
+          <h2 className="center">Listes des Professeur a Montmorency</h2>
             <ListeProfs profs={listeProfs}/>
             <NouvelProf setProf={setListeProfs} profs={listeProfs}/>
           </Route>
@@ -57,8 +60,9 @@ function App() {
           <Route path="/:id/places">
             <CoursProfs listeCours={cours}/>
           </Route>
-          <Route path="/ListeCours/:titre"> {/*Cours detaille*/}
-            <Etudiants/>
+          <Route path=""> {/*Cours detaille*/}
+          <h2 className="center">Listes des Etudiants par cours</h2>
+            <NouvelEtudiant />
           </Route>
           <Redirect to="/" />
         </Switch>
